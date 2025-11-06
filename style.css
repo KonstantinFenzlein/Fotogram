@@ -98,7 +98,7 @@ main {
 .img-styling:hover {
   cursor: pointer;
   box-shadow: 5px 5px 5px rgb(142, 102, 91);
-  transform: scale(1.45);
+  transform: scale(1.15);
   transition: 0.3s ease-in-out;
 }
 
@@ -262,6 +262,13 @@ p {
   .main-footer {
     justify-content: center;
   }
+
+ .main-section {
+    font-size: 24px;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  }
 }
 
 /* Media Query 340px */
@@ -271,5 +278,11 @@ p {
     height: 100px;
     width: 100px;
   }
-}
 
+  .main-section {
+    font-size: 24px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  }
+}

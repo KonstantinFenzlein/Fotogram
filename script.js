@@ -27,7 +27,7 @@ const GALLERY = [
   "./img/cat 9.jpg",
   "./img/cat 10.jpg",
   "./img/cat 11.jpg",
-  "./img/Cat 12.jpg",
+  "./img/cat 12.jpg",
 ];
 
 
@@ -60,8 +60,7 @@ function openDialog(counterindex) {
   const openedDialog = document.getElementById("imgDialog");
   openedDialog.classList.add("dialog-opened");
   DIALOG_IMG_REF.innerHTML = `<div class="container-img-big"><img id="ImgBigId${counterindex}" class="img-big-styling" src="${GALLERY[counterindex]}"></div>`;
-  DIALOG_REF.showModal();
-  BACK_BTN_CONTAINER_REF.innerHTML = `<button role="go-backwards-through-gallery" onclick="goBack(${counterindex})" class="dialog-btns" id="goBackBtn">
+    BACK_BTN_CONTAINER_REF.innerHTML = `<button role="go-backwards-through-gallery" onclick="goBack(${counterindex})" class="dialog-btns" id="goBackBtn">
               <img class="btn-img" src="./img/arrowleft.png" alt="" />
             </button>`;
   FORWARD_BTN_CONTAINER_REF.innerHTML = `<button role="go-forwards-through-gallery" onclick="goForward(${counterindex})" class="dialog-btns" id="goForwardBtn">
@@ -72,8 +71,8 @@ function openDialog(counterindex) {
     }</p>`;
   currentIndex = counterindex;
   startAutoSlide();
-}
-
+  DIALOG_REF.showModal();
+  }
 
 //Funktion wechselt Bild bei onclick nach vorne 
 
@@ -90,7 +89,6 @@ function goForward() {
     }</p>`;
 }
 
-
 //Funktion wechselt Bild bei onclick nach hinten 
 
 function goBack() {
@@ -106,7 +104,6 @@ function goBack() {
     }</p>`;
 }
 
-
 //Schließende Funktion
 
 function closeDialog() {
@@ -115,7 +112,6 @@ function closeDialog() {
   DIALOG_REF.close();
   stopAutoSlide();
 }
-
 
 // Auto-Slideshow Funktion - Bild wechselt alle 3 Sekunden nach vorne
 
@@ -130,7 +126,6 @@ function startAutoSlide() {
 function stopAutoSlide() {
   clearInterval(autoSlideInterval);
 }
-
 
 // Dialog beim Klicken neben das Bild schließen
 
