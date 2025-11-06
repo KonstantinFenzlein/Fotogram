@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fotogram</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./script.js" defer></script>
+  <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+</head>
+
+<body onload="mainRender()">
+  <section class="onload-section">
+    <header class="main-header">
+      <img class="logo-img" src="./img/fotogram_logo.svg" alt="Blumen-Logo" />
+    </header>
+  </section>
+
+  <main>
+    <section class="main-section">
+      <h1>Your personal photo album</h1>
+    </section>
+
+    <section id="imgArea" class="gallery-section"></section>
+
+    <dialog id="imgDialog">
+      <header class="dialog-header">
+        <div id="headerDialog"></div>
+        <button role="closing-dialog" class="dialog-btns" onclick="closeDialog()">
+          <img class="btn-img" src="./img/closebtn.png" alt="x Button" />
+        </button>
+      </header>
+      <div id="imgDialogBig"></div>
+      <footer class="dialog-footer">
+        <div id="backBtnContainer"></div>
+        <div id="dialogImgCounterContainer"></div>
+        <div id="forwardBtnContainer"></div>
+      </footer>
+    </dialog>
+  </main>
+
+  <section class="section-footer">
+    <footer class="main-footer">
+      <img class="logo-img" src="./img/favicon1.svg" alt="Blumen-Logo" />
+    </footer>
+  </section>
+</body>
+
+</html>
